@@ -11,22 +11,10 @@ namespace MockApplication
     {
         static void Main(string[] args)
         {
-            Order onlineOrder = new Order();
-            onlineOrder.AddOrderLine(new OrderLine()
-            {
-                Total = 1200
-            });
+            var onlineOrder = new Order();
+            onlineOrder.AddOrderLine(new OrderLine(){Total = 123});
+            onlineOrder.RemoveOrderLine(new OrderLine(){Total = 123});
 
-            Student JohnDoe = new Student();
-            JohnDoe.AddClass(new Course
-            {
-                Id = 1,
-                Name = "Principles of Biology"
-            });
-
-            JohnDoe.EnrolledCourses.Count();
-
-            Console.WriteLine(onlineOrder.OrderLine);
 
         }
     }
